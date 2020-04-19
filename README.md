@@ -1,6 +1,6 @@
 #### Wireframe
 
-![wireframe]('./React_Photo_App/react_photo_app/wireframe/React_Photo_App.png')
+![wireframe](react_photo_app/wireframe/React_Photo_App.png)
 
 #### Requirements
 
