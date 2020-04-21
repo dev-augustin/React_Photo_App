@@ -18,5 +18,4 @@
 
 #### Reference
 
-1. https://medium.com/firebase-developers/how-to-setup-firebase-authentication-with-react-in-5-minutes-maybe-10-bb8bb53e8834
-2. Firebase Docs: https://firebase.google.com/docs/reference/js/firebase.auth.Auth
+1. Firebase Docs: https://firebase.google.com/docs/reference/js/firebase.auth.Auth
