@@ -7,7 +7,8 @@ export default class Signup extends Component {
         this.state={
             Username :"",
             Emai: "",
-            Password : ""
+            Password : "",
+            ErrorMessage: ""
         }
 
         this.handleChange=this.handleChange.bind(this);
@@ -29,6 +30,8 @@ export default class Signup extends Component {
          .catch ((error) =>{
              console.log(error);
              console.log(error.message); 
+             alert(error.message);
+             this.setState({ErrorMessage : error.message});
          })
 
     }
@@ -45,7 +48,7 @@ export default class Signup extends Component {
                     <label>  Password  </label>
                     <input type="password" name="Password" value={this.state.Password} onChange={this.handleChange}/>
                     <button onClick={this.signup}>Signup</button>
-                 
+                    <h3 style={{color:"red"}}>{this.state.ErrorMessage}</h3>
                 </form>
             </div>
         )
