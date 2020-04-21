@@ -14,3 +14,8 @@
 
 #### Note:
 1. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+#### Reference
+
+1. https://medium.com/firebase-developers/how-to-setup-firebase-authentication-with-react-in-5-minutes-maybe-10-bb8bb53e8834
