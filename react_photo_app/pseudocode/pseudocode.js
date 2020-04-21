@@ -12,5 +12,8 @@
 //4. Copy the config details
 //5. Install Firebase - npm install --save firebase
 //6. Under src -> create firebaseConfig file
+//7. Add the config details
+//8. Create Login form
+//9. Create Signup form
 
 
