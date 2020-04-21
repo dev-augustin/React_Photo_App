@@ -7,16 +7,17 @@ export default class Login extends Component {
         super(props);
         this.state={
             Email: "",
-            Password: ""
+            Password: "",
+            ErrorMessage: ""
         }
         this.handleChange=this.handleChange.bind(this);
         this.login=this.login.bind(this);
     }
-     handleChange(event){
+     handleChange = (event) =>{
          this.setState({[event.target.name] : event.target.value})
      }
      
-     login(event){
+     login = (event) => {
          event.preventDefault();
          firebaseConfig.auth().signInWithEmailAndPassword(this.state.Email, this.state.Password)
          .then ((user) =>{console.log(user)})
@@ -25,6 +26,7 @@ export default class Login extends Component {
              console.log(error.message);
              alert(error.message);
              alert("click on sign up to register");
+             this.setState({ErrorMessage : error.message});
          })
          
      }
@@ -39,6 +41,7 @@ export default class Login extends Component {
                     <label>  Password  </label>
                     <input type="password" name="Password" value={this.state.Password} onChange={this.handleChange}/>
                     <button type="button"  onClick={this.login}> Login </button>
+                    <h3 style={{color:"red"}}>{this.state.ErrorMessage}</h3>
                  
                 </form>
                 <SignUp/>
