@@ -20,7 +20,9 @@ export default class Login extends Component {
      login = (event) => {
          event.preventDefault();
          firebaseConfig.auth().signInWithEmailAndPassword(this.state.Email, this.state.Password)
-         .then ((user) =>{console.log(user)})
+         .then ((user) =>{console.log(user);
+        // wrtieUserData(user)
+    })
          .catch((error) => {
              console.log(error);
              console.log(error.message);
@@ -30,6 +32,13 @@ export default class Login extends Component {
          })
          
      }
+
+    //  wrtieUserData = () =>{
+    //   firebaseConfig.database().ref('users/' + user.uid).set(user).catch(error => {
+    //       console.log(error.message)
+    //      });
+   
+    //  }
     render() {
         return (
             <div>
