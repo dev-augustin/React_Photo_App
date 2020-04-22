@@ -16,6 +16,10 @@ const firebaseConfig= firebase.initializeApp({
   //initializing firebase
   // const firebaseSetting= firebase.inititalizeApp(config);
   console.log(firebaseConfig);
+//   const dbRef = firebase.database().ref();
+// const usersRef = dbRef.child('users');
+const database = firebase.database();
+
   //exporting 
   export default firebaseConfig;
 
