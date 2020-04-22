@@ -23,9 +23,11 @@ export default class Signup extends Component {
     signup = (event) => {
          event.preventDefault();
          firebaseConfig.auth().createUserWithEmailAndPassword(this.state.Email, this.state.Password)
-         .then((user) =>{ 
-             console.log(user);
-            alert("User created. Go to Login")
+         
+        //  .then((user) =>{ 
+        //      console.log(user);
+        //     alert("User created. Go to Login")
+            // wrtieUserData(user)
             })
          .catch ((error) =>{
              console.log(error);
@@ -33,8 +35,14 @@ export default class Signup extends Component {
              alert(error.message);
              this.setState({ErrorMessage : error.message});
          })
+        }
 
-    }
+    //      wrtieUserData = () =>{
+    //         firebaseConfig.database().ref('users/' + user.uid).set(user).catch(error => {
+    //             console.log(error.message)
+    //            });
+    // }
+
     render() {
         return (
             <div>
