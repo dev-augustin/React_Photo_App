@@ -1,6 +1,7 @@
 // import firebase from 'firebase';
 import  firebase from 'firebase/app';
-import 'firebase/firebase-auth'
+import 'firebase/firebase-auth';
+import 'firebase/firebase-database';
 
 //configuration settings from firebase console for the firebase project
 const firebaseConfig= firebase.initializeApp({
@@ -16,9 +17,9 @@ const firebaseConfig= firebase.initializeApp({
   //initializing firebase
   // const firebaseSetting= firebase.inititalizeApp(config);
   console.log(firebaseConfig);
-//   const dbRef = firebase.database().ref();
+// const dbRef = firebase.database().ref();
 // const usersRef = dbRef.child('users');
-const database = firebase.database();
+//const database = firebase.database();
 
   //exporting 
   export default firebaseConfig;

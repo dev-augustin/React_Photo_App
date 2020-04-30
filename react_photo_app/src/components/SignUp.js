@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import firebaseConfig from '../firebaseConfig';
-
+import * as firebase from 'firebase'
 export default class Signup extends Component {
     constructor(props){
         super(props);
@@ -8,7 +8,9 @@ export default class Signup extends Component {
             Username :"",
             Emai: "",
             Password : "",
-            ErrorMessage: ""
+            ErrorMessage: "",
+            user:""
+
         }
 
         this.handleChange=this.handleChange.bind(this);
@@ -22,12 +24,12 @@ export default class Signup extends Component {
 
     signup = (event) => {
          event.preventDefault();
-         firebaseConfig.auth().createUserWithEmailAndPassword(this.state.Email, this.state.Password)
+         firebase.auth().createUserWithEmailAndPassword(this.state.Email, this.state.Password)
          
-        //  .then((user) =>{ 
-        //      console.log(user);
-        //     alert("User created. Go to Login")
-            // wrtieUserData(user)
+         .then((user) =>{ 
+             console.log(user);
+            alert("User created. Go to Login")
+            // writeUserData(user);
             })
          .catch ((error) =>{
              console.log(error);
@@ -37,11 +39,7 @@ export default class Signup extends Component {
          })
         }
 
-    //      wrtieUserData = () =>{
-    //         firebaseConfig.database().ref('users/' + user.uid).set(user).catch(error => {
-    //             console.log(error.message)
-    //            });
-    // }
+    
 
     render() {
         return (
